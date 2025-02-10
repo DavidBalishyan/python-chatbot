@@ -1,7 +1,10 @@
 from langchain_ollama import OllamaLLM
 
+
+question = input(">>>")
+
 model = OllamaLLM(model="llama3.2")
+result = model.invoke(input=question)
 
-result = model.invoke(input="Hello World")
-
-print(result)
+print(f"qusetion: {question}")
+print(f"answer: {result}")
